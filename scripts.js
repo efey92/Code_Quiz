@@ -1,12 +1,12 @@
 const begin = document.getElementById('start');
-const questionContainerElement = document.getElementById('question-container');
+const quizElement = document.getElementById('quiz');
 
 begin.addEventListener('click', start);
 
 function start(){
     console.log('started');
-    begin.classList.add('hide')
-    questionContainerElement.classList.remove('hide')
+    landing.classList.add('hide')
+    quizElement.classList.remove('hide')
     next()
 };
 
@@ -36,7 +36,7 @@ const qAndA = [
     },{
         question: "What does JS stand for?",
         option1:"",
-        option2: "JavaScript"
+        option2: "JavaScript",
         option3: "",
         option4: "",
         answer: "2"
