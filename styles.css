@@ -1,0 +1,26 @@
+body {
+    background-color:darkgreen;
+}
+
+.container {
+    box-sizing:border-box;
+    border:10px;
+    width:480px;
+    height:280px;
+    border:20px;
+    border:double;
+    margin:auto;
+    padding:auto;
+    background-color:beige;
+    position:center;
+    box-shadow: gray;
+    text-align:center;
+}
+
+.quiz{
+    text-align:center;
+}
+
+.hide {
+    display:none;
+}

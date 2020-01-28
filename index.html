@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id="landing">
+        <h1>The Developer's Quiz</h1>
+            <h4>Current Highest Scores: <text id="highscore"></text></h4>
+            <h4>Most Recent Score: <text id="score"></text></h4>
+            <button class="button" id="start" onclick=start()>Start Quiz!</button>    
+        </div>
+        <div class="hide" id="quiz">
+            <button class="button" id="option1">Answer One</button>
+            <button class="button" id="option2">Answer Two</button>
+            <button class="button" id="option3">Answer Three</button>
+            <button class="button" id="option4">Answer Four</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+<!--
+Pseudo:
+    wire button to start quiz
+        Set onClick for start button, remove hide class from id=quiz and add hide class to id=landing
+    must display timer in corner of box
+    must show final score on the final page
+    wire high scores button to bring to page reflecting high scores on local store
+    wire back button to return to main box from high scores
+    Center the Start Button in CSS
+-->
