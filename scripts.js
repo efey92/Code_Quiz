@@ -1,18 +1,27 @@
 const begin = document.getElementById('start');
-const quizElement = document.getElementById('quiz');
+const quizEl = document.getElementById('quiz');
+const qEl = document.getElementById('questions')
+const aEl = document.getElementById('answers')
+
+// const shuffledQuestions, currentQuestionIndex
 
 begin.addEventListener('click', start);
 
 function start(){
-    console.log('started');
     landing.classList.add('hide')
-    quizElement.classList.remove('hide')
+    // shuffledQuestions = questions.sort(() => math.random() - .5)
+    // currentquestionIndex = 0
+    quizEl.classList.remove('hide')
     next()
 };
 
-function next(){
+function next(questions){
+//    nextQuestion(shuffledQuestions[currentQuestionIndex])
+// };
 
-};
+function questions(questions) {
+    qEl.innerHTML = qEl.qandA
+}
 
 function selectAnswer() {
 
@@ -20,13 +29,11 @@ function selectAnswer() {
 
 const qAndA = [
     {
-        question: "What does HTML stand for?",
-        option1: "Hyper Text Marker Language",
-        option2: "Hyper Text Markup Language",
-        option3: "Hyper Text Maker Language",
-        option4: "Hyper Text Markdown Language",
-        answer: "2"
-    },{
+    {text: '"Hyper Text Marker Language', correct: true}
+    {text: 'Hyper Text Markup Language' correct}
+    {text: 'Hyper Text Maker Language'}
+    {text: 'Hyper Text Markdown Language'},
+    }]{
         question: "What does CSS stand for?",
         option1: "",
         option2: "",
