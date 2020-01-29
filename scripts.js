@@ -1,7 +1,7 @@
 const begin = document.getElementById('start');
 const quizEl = document.getElementById('quiz');
 const questionsEl = document.getElementById('questions')
-const answersEl = document.getElementsByClassName('button')
+const answersEl = document.getElementsByClassName('answers')
 let shuffle, questionsIndex
 
 begin.addEventListener('click', start);
@@ -27,10 +27,10 @@ function displayQuestions(question) {
         if (answer = true) {
             button.dataset.correct = answer.correct
         }
-        // }else{
+                // }else{
         // remove time from timer}
         button.addEventListener('click', selectAnswer)
-        answersEl.appendChild(button)
+        answersEl.appendChild(answers)
     })
 }
 function selectAnswer(){}
