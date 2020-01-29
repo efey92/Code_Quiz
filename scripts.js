@@ -1,40 +1,47 @@
 const begin = document.getElementById('start');
 const quizEl = document.getElementById('quiz');
 const questionsEl = document.getElementById('questions')
-const answersEl = document.getElementById('answer')
+const answersEl = document.getElementsByClassName('answer')
 let shuffle, questionsIndex
 
 begin.addEventListener('click', start);
 
 function start(){
     landing.classList.add('hide')
-    shuffle = questions.sort(() => math.random() - .5)
+    startButton.classList.add('hide')
     questionsIndex = 0
     quizEl.classList.remove('hide')
     next()
 };
 
 function next() {
-    displayQuestions(shuffle[questionsIndex]) 
+    displayQuestions([questionsIndex])
 }
 
 function displayQuestions(question) {
-    questionsEl.innerText = question.question
+    questionsEl.innerText = questions.question
+    questions.answer.forEach(answers => {
+        const button = document.createElement('button')
+        button.innerText = answers.button.classList.add('hi')
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer)
+        answerButtonsElement.appendChild(button)
+    })
 }
+function selectAnswer(){}
 
-function selectAnswer()
-
-const questions = [
+const questions =
     {
         question: 'What does HTML stand for?',
         answer: [
-            {text: '"Hyper Text Marker Language', correct: true}
-            {text: 'Hyper Text Markup Language', correct: false}
-            {text: 'Hyper Text Maker Language', correct: false}
-            {text: 'Hyper Text Markdown Language', correct: false}
-        ]
-    }
-]
+        {
+                text: '"Hyper Text Markup Language',
+                correct: true
+            }
+        ]};
+
 //function to start game
 // must take user input and compare against correct answer
 //must automatically move from one question to the next after inputting response
