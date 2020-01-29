@@ -21,20 +21,19 @@ function next() {
 function displayQuestions(question) {
     questionsEl.innerText = question.question
 }
+function selectAnswer(){}
 
-function selectAnswer()
-
-const questions = [
+const questions =
     {
         question: 'What does HTML stand for?',
         answer: [
-            {text: '"Hyper Text Marker Language', correct: true}
-            {text: 'Hyper Text Markup Language', correct: false}
-            {text: 'Hyper Text Maker Language', correct: false}
-            {text: 'Hyper Text Markdown Language', correct: false}
+            {
+                text: '"Hyper Text Markup Language',
+                correct: true
+            }
         ]
-    }
-]
+    };
+
 //function to start game
 // must take user input and compare against correct answer
 //must automatically move from one question to the next after inputting response
